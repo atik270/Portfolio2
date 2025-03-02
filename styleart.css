@@ -1,0 +1,544 @@
+<style>
+  /* Skills Section Styling */
+  #skills {
+    padding: 2rem 0;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    background-color: #2C2C2C;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .progress-bar {
+    background-color: #444;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .progress {
+    background-color: #00D1B2;
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+  }
+
+  .skill-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #E0E0E0;
+  }
+
+  /* Hover effect for skill items */
+  .skill-item:hover {
+    background-color: #3A3A3A;
+  }
+</style>
+
+<style>
+  #hero {
+    position: relative;
+    color: #fff;
+  }
+
+  #hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+
+  #hero p {
+    font-size: 1.75rem;
+  }
+</style>
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hero Section with Overlay */
+#hero {
+  background: url('hero-bg.webp') no-repeat center center/cover;
+  text-align: center;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4rem 0;
+}
+
+#typing-effect {
+  font-size: 1.5rem;
+  color: #FFDD57;
+  height: 40px;
+  display: inline-block;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #FFDD57;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #e6c800;
+}
+
+/* Skills Progress Bar */
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #00D1B2;
+  transition: width 1s ease-in-out;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #fff;
+  color: #222;
+}
+
+.dark-mode .hero-overlay {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+<style>
+  /* Skills Section Styling */
+  #skills {
+    padding: 2rem 0;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    background-color: #2C2C2C;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .progress-bar {
+    background-color: #444;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .progress {
+    background-color: #00D1B2;
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+  }
+
+  .skill-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #E0E0E0;
+  }
+
+  /* Hover effect for skill items */
+  .skill-item:hover {
+    background-color: #3A3A3A;
+  }
+</style>
+
+<style>
+  form button:hover {
+    background-color: #FFDD57;
+    transform: scale(1.05);
+  }
+</style>
+
+
+  /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #E0E0E0;
+  background-color: #1E1E1E;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #00D1B2;
+}
+
+a {
+  color: #FFDD57;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #E0E0E0;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+#about {
+  background-color: #2C2C2C;
+  padding: 2rem 0;
+}
+
+/* Portfolio Section */
+#portfolio {
+  padding: 2rem 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: #2C2C2C;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #2C2C2C;
+  padding: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.5rem;
+  border: 1px solid #00D1B2;
+  border-radius: 4px;
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+}
+
+form button {
+  padding: 0.5rem;
+  background-color: #00D1B2;
+  color: #1E1E1E;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #FFDD57;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #2C2C2C;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+}
+
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6347; /* Highlight color on hover (e.g., tomato) */
+}
+
+/* Mobile Menu Toggle (Hidden by Default) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Hover effect for buttons */
+.button {
+  background-color: #ff6347; /* Tomato color */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e5533d; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Hover effect for project cards */
+.project-card {
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Lift card up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Hover effect for navigation links */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff6347;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline effect on hover */
+}
+
+/* Fade-in animation for the hero section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Bounce animation for call-to-action button */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.cta-button {
+  animation: bounce 2s infinite; /* Infinite bounce effect */
+}
+
+/* Rotate animation for skills icons */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-icon:hover {
+  animation: rotate 1s linear infinite; /* Spin on hover */
+}
+
+
+/* Smooth transition for all links */
+a {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transition for images */
+img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1); /* Slightly enlarge images on hover */
+  opacity: 0.9;
+}
+
+/* Transition for background colors */
+.section {
+  transition: background-color 0.5s ease;
+}
+
+.section:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+

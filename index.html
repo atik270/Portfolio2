@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atiqul Abu Yousuf - Portfolio</title>
+  <link rel="stylesheet" href="css/styleart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<script>
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const targetId = this.getAttribute('href'); // Get the target section ID
+      const targetSection = document.querySelector(targetId); // Find the target section
+
+      if (targetSection) {
+        const offset = 80; // Adjust this value to account for the fixed navbar height
+        const targetPosition = targetSection.offsetTop - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth' // Smooth scroll
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  .menu-toggle {
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0); /* Ensure the menu slides smoothly */
+  }
+</style>
+
+
+<style>
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+</style>
+
+
+
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Portfolio</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>Atiqul Abu Yousuf</h1>
+        <p id="typing-effect"></p>
+        <a href="resume.pdf" class="cta-button" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container fade-in">
+      <h2>About Me</h2>
+      <p>
+        I am an Information Technology graduate from the University of Derby, UK, with a passion for teaching, data visualization, and web development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container fade-in">
+      <h2>Portfolio</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Thesis Project</h3>
+          <p>People's Perception on Internet Privacy and Cyber-crime.</p>
+        </div>
+        <div class="project-card">
+          <h3>Teaching Experience</h3>
+          <p>Physics and ICT Teacher at Cardiff International School.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">
+        <p>HTML</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>CSS</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>Python</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>R-programming</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <p>Tableau</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container fade-in">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="container">
+
+      <p>&copy; 2025 Atiqul Abu Yousuf. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
